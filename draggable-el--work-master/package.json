@@ -1,0 +1,31 @@
+{
+  "name": "jquery.plugin",
+  "version": "1.0.0",
+  "description": "//new plugin\r $.fn.myPluginName = function() {\r     // your plugin logic\r };",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsdoc": "jsdoc ./src/widget.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^4.0.0",
+    "gulp-inject-svg": "^0.1.16",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "jquery": "^3.2.1",
+    "jquery-ui-dist": "^1.12.1",
+    "jsdoc": "^3.5.5"
+  },
+  "dependencies": {}
+}
