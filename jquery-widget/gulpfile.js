@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     eslint = require('gulp-eslint'),
-    eslint_conf = require('../eslint/eslintrc.json'),
+    eslint_conf = require('./src/eslint/eslintrc.json'),
     sourcemaps = require('gulp-sourcemaps'),
     injectSvg = require('gulp-inject-svg'),
     inline = require('gulp-inline'),
@@ -18,7 +18,7 @@ injectSvgOptions = {
     base: '../img'
 };
 
-var ROOT = '../../';
+var ROOT = './';
 
 //delete previous ready sass block
 gulp.task('clean_sass', function () {
@@ -125,7 +125,7 @@ gulp.task('browser-sync', ['clean-global','svg-inject'], function () {
 });
 
 gulp.task('watch', ['browser-sync', 'sass', 'jquery', 'widget-min', 'main-min'], function () {
-    gulp.watch('../sass/**/*.+(sass|scss)', ['sass']);
-    gulp.watch('../*.html', browserSync.reload);
-    gulp.watch('../js/*.js', ['lint', 'widget-min', 'main-min']);
+    gulp.watch(ROOT+'/src/sass/**/*.+(sass|scss)', ['sass']);
+    gulp.watch(ROOT+'/src/*.html', browserSync.reload);
+    gulp.watch(ROOT+'/src/js/*.js', ['lint', 'widget-min', 'main-min']);
 });

@@ -3,6 +3,16 @@ html,body{
     padding: 0;
     height: 100%;
 }
+.jsdoc{
+    position: absolute;
+    top: 80px;
+    left: 155px;
+    border-bottom: 1px solid #fe9922;
+    color: #fe9922;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+}
 #drag1 svg{
     position: absolute;
     top: 90px;

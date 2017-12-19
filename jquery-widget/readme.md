@@ -1,11 +1,11 @@
 Just drag'n drop plugin for jquery, based on widget factory.
 
-JSdoc:
+--> If you want to miss all steps just code in console >npm run build
 
-1. install package json
+--> To install all dependencies from package.json code in condole >npm run preserve
 
-2. to generate jsdoc write in console >npm run jsdoc
+--> To generate JSDoc >npm run jsdoc
 
-3. then start server with >http-server
+--> Just start gulp with file watching >npm run serve
 
-4. now you can see docs by the link http://localhost:8080/out/global.html
+--> <IN DEVELOPMENT> To restore project to start state >npm run restore <IN DEVELOPMENT>
