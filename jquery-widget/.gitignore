@@ -1,8 +1,7 @@
 /node_modules
 /package-lock.json
 /.idea
-/dist
 /out
 /css
 /js
-/index.html
+/src/js/tmp
