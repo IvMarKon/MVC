@@ -1,6 +1,6 @@
 /**
  * @fileOverview Widget core file
- * @author <a href="https://github.com/IvMarKon">Ivan Markov</a>
+ * @author https://github.com/IvMarKon
  * @version 1.2
  */
 $.widget("custom.dragndrop", {
@@ -75,7 +75,7 @@ $.widget("custom.dragndrop", {
         var widget_prop = this;
 
         if (this.options.itemExist == false) {
-            $("#drag-container").append(`<div class="fixed" id="drag-element"><img src="/move.svg" alt=""></div>`);
+            $("#drag-container").append('<div class="fixed" id="drag-element"></div>');
 
             //specifing namespace for multiple events in widget with div depending on its selector
             $("div").on("custom.dragndrop", function (e) {
@@ -144,4 +144,4 @@ $.widget("custom.dragndrop", {
     }
 });
 
-console.log(111);
+console.log("The source of this message must be in widget.js !");

@@ -3,6 +3,13 @@ html,body{
     padding: 0;
     height: 100%;
 }
+#drag1 svg{
+    position: absolute;
+    top: 90px;
+    left: 75px;
+    width: 70px;
+    height: 40px;
+}
 #drag-container{
     position: absolute;
     background-color: #ffffff;

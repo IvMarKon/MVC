@@ -12,4 +12,7 @@ $(document).ready(function () {
     $(".delete").on("click", function () {
         c_widget1.dragndrop("remove");
     });
+    $("#drag-element").append('<img src="/move.svg" alt="">');
+
+    console.log("Message from main file !");
 });
