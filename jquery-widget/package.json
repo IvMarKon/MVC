@@ -8,7 +8,8 @@
     "jsdoc": "jsdoc src/js/widget.js",
     "preserve": "npm install",
     "serve": "gulp watch",
-    "build": "npm install && npm run jsdoc && npm run serve"
+    "build": "npm install && npm run jsdoc && npm run serve",
+    "restore": "gulp restore"
   },
   "author": "",
   "license": "ISC",

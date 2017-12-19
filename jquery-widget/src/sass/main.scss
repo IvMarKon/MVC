@@ -15,10 +15,7 @@ html,body{
 }
 #drag1 svg{
     position: absolute;
-    top: 90px;
-    left: 75px;
-    width: 70px;
-    height: 40px;
+    transform: rotate(45deg);
 }
 #drag-container{
     position: absolute;

@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     inline = require('gulp-inline'),
     jsdoc = require("gulp-jsdoc")
 injectSvgOptions = {
-    base: '../img'
+    base: './src/img/'
 };
 
 var ROOT = './';
@@ -65,20 +65,20 @@ gulp.task('lint', function () {
 });
 //clear tmp widjet file with previous injected svg
 gulp.task('clean-inject', function () {
-    return del(ROOT + '/index.html', {
+    return del(ROOT + '/src/js/tmp/main.js', {
         force: true
     });
 });
 //inject svg and create new file
 gulp.task('svg-inject', ['clean-inject'], function () {
-    return gulp.src(ROOT+'/src/index.html')
+    return gulp.src(ROOT+'/src/js/main.js')
         .pipe(injectSvg(injectSvgOptions))
-        .pipe(gulp.dest(ROOT));
+        .pipe(gulp.dest(ROOT+'/src/js/tmp'));
 });
 
 //create main file sourcemap
-gulp.task('main-map', ['lint'], function () {
-    return gulp.src(ROOT + '/src/js/main.js')
+gulp.task('main-map', ['lint','svg-inject'], function () {
+    return gulp.src(ROOT + '/src/js/tmp/main.js')
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
         .pipe(sourcemaps.write('./'))
@@ -87,10 +87,7 @@ gulp.task('main-map', ['lint'], function () {
 //minify main file
 gulp.task('main-min', ['main-map'], function(){
     return gulp.src(ROOT + '/js/main.min.js')
-            .pipe(uglify())
-            // .pipe(rename({
-            //     suffix: '.min'
-            // }))
+            // .pipe(uglify())
             .pipe(gulp.dest(ROOT + '/js'))
             .pipe(browserSync.reload({
                 stream: true
@@ -122,6 +119,10 @@ gulp.task('browser-sync', ['clean-global','svg-inject'], function () {
         },
         notify: false
     });
+});
+
+gulp.task('restore',function(){
+    return del([ROOT+'/css',ROOT+'/js',ROOT+'/out',ROOT+'/src/js/tmp'],{force: true});
 });
 
 gulp.task('watch', ['browser-sync', 'sass', 'jquery', 'widget-min', 'main-min'], function () {

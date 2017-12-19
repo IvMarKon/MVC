@@ -4,15 +4,16 @@ $(document).ready(function () {
         container: "drag1"
     });
     c_widget1.dragndrop("init");
+    $("#drag-element").append(`<img src="move.svg" alt="">`);
 
     //Mouse events
     $(".init").on("click", function () {
         c_widget1.dragndrop("init");
+        $("#drag-element").append(`<img src="move.svg" alt="">`);
     });
     $(".delete").on("click", function () {
         c_widget1.dragndrop("remove");
     });
-    $("#drag-element").append('<img src="/move.svg" alt="">');
 
     console.log("Message from main file !");
 });
