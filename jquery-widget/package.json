@@ -1,6 +1,6 @@
 {
   "name": "jquery.plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "//new plugin\r $.fn.myPluginName = function() {\r     // your plugin logic\r };",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "serve": "gulp watch",
     "build": "npm install && npm run jsdoc && npm run serve",
     "restore": "gulp restore",
-    "postversion": "git add . && git commit -m'version update commit' && git push origin master"
+    "postversion": "git push origin master"
   },
   "author": "ivan.markov",
   "license": "ISC",
