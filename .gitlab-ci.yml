@@ -10,3 +10,4 @@ before_script:
 test:start:1:
   script:
    - npm test
+   
