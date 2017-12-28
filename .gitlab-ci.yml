@@ -6,7 +6,6 @@ cache:
 
 job:
   only:
-    refs:
     - cs  
 
 before_script:
