@@ -4,10 +4,6 @@ cache:
   paths:
   - node_modules/
 
-job:
-  only:
-    - cs  
-
 before_script:
   - npm install
 
