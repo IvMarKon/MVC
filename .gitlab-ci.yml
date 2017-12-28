@@ -6,7 +6,8 @@ cache:
 
 job:
   only:
-    -cs  
+    refs:
+    - cs  
 
 before_script:
   - npm install
