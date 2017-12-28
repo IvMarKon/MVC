@@ -6,6 +6,7 @@
   "scripts": {
     "test": "gulp lint",
     "jsdoc": "jsdoc src/js/widget.js",
+    "preserve": "npm istall",
     "serve": "gulp watch",
     "debug": "gulp debug",
     "precommit": "npm test",
