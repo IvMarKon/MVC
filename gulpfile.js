@@ -61,9 +61,9 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', ['browser-sync', 'lint'], function () {
     gulp.watch(ROOT+'*.html', browserSync.reload);
-    gulp.watch(ROOT+'js/*.js', ['lint',browserSync.reload]);
+    gulp.watch(ROOT+'sorts_files/js/*.js', ['lint',browserSync.reload]);
 });
 
 gulp.task('debug',function(){
-    gulp.watch(ROOT+'js/*.js', ['lint']);
+    gulp.watch(ROOT+'sorts_files/js/*.js', ['lint']);
 });
