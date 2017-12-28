@@ -1,0 +1,22 @@
+{
+  "name": "ppch-sorts",
+  "version": "1.0.0",
+  "description": "just js sorts",
+  "main": "merge.sort.js",
+  "scripts": {
+    "test": "gulp lint",
+    "jsdoc": "jsdoc src/js/widget.js",
+    "serve": "gulp watch",
+    "debug": "gulp debug",
+    "precommit": "npm test",
+    "prepush": "npm test"
+  },
+  "author": "Ivan Markov",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.21.0",
+    "console-browserify": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0"
+  }
+}
