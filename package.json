@@ -5,7 +5,6 @@
   "main": "merge.sort.js",
   "scripts": {
     "test": "gulp lint",
-    "jsdoc": "jsdoc src/js/widget.js",
     "serve": "npm install && gulp watch",
     "debug": "gulp debug",
     "precommit": "npm test",
