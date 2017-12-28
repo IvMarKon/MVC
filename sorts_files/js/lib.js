@@ -14,8 +14,17 @@ function getRandomArray(size) {
 
   return arr;
 }
+//algorithm counter output
+function algo_count(start) {
+  console.warn("Algorithm runs: " + new Date(new Date() - start).getUTCMilliseconds() + " milliseconds");
+}
+
+/**
+ * Merge sort
+ */
+
 //sorts two arrays and concat them to one
-function mergeTopDown(left, right) {
+function mergeTopDown(left, right, switcher) {
   //final array
   var arr = [];
   //watch if there any value in array
@@ -29,16 +38,16 @@ function mergeTopDown(left, right) {
     }
   }
 
-
-  console.log("+ --------------------------------------Output-------------------------------------- +");
-  console.log("| Result array of iteration: " + arr.concat(left).concat(right));
-  console.log("+ ---------------------------------------------------------------------------------- +");
-
+  if (switcher === true) {
+    console.log("+ --------------------------------------Output-------------------------------------- +");
+    console.log("| Result array of iteration: " + arr.concat(left).concat(right));
+    console.log("+ ---------------------------------------------------------------------------------- +");
+  }
   //in the end we concat all three final arrays that we get
   return arr.concat(left).concat(right);
 }
-
-function mergeSort(arr) {
+//take array and recursively divide it
+function mergeSort(arr, switcher) {
   //if array empty or have one element it is sorted
   if (arr.length < 2) {
     return arr;
@@ -48,16 +57,61 @@ function mergeSort(arr) {
     var left = arr.slice(0, Math.floor(arr.length / 2));
     var right = arr.slice(Math.floor(arr.length / 2), arr.length);
 
-
-    console.log("+ --------------------------------Start-of-iteration-------------------------------- +");
-    console.log("| Start array: " + arr);
-    console.log("| Input left array: " + left);
-    console.log("| Input right array: " + right);
-    console.log("+ ---------------------------------End-of-iteration--------------------------------- +");
-
+    if (switcher === true) {
+      console.log("+ --------------------------------Start-of-iteration-------------------------------- +");
+      console.log("| Start array: " + arr);
+      console.log("| Input left array: " + left);
+      console.log("| Input right array: " + right);
+      console.log("+ ---------------------------------End-of-iteration--------------------------------- +");
+    }
 
     //call of sort function and continue divide both left and right arrays recursively
-    return mergeTopDown(mergeSort(left), mergeSort(right));
+    return mergeTopDown(mergeSort(left, switcher), mergeSort(right, switcher));
   }
 
+}
+
+/**
+ * Quick sort
+ */
+
+// swap two elements in array
+function quickSort(arr, switcher) {
+
+  //if array length less than 2, just return array
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  //enable log to console
+  if (switcher === true) {
+    console.log("+ ------------------------------------Start-array----------------------------------- +");
+    console.log("| " + arr);
+    console.log("+ ---------------------------------------------------------------------------------- +");
+  }
+
+  //two arrays for greater elements and for less elements
+  var lesser = [];
+  var greater = [];
+
+  //if element bigger then first one push it to greater else to lesser
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < arr[0]) {
+      lesser.push(arr[i]);
+    } else if (arr[i] > arr[0]) {
+      greater.push(arr[i]);
+    }
+  }
+
+  if (switcher === true) {
+    console.log("+ --------------------------------Start-of-iteration-------------------------------- +");
+    console.log("| Less array: " + lesser);
+    console.log("| Pivot value: " + arr[0]);
+    console.log("| Great array: " + greater);
+    console.log("| Returns: " + quickSort(lesser).concat(arr[0], quickSort(greater)));
+    console.log("+ ---------------------------------End-of-iteration--------------------------------- +");
+  }
+
+  //concat two arrays and first element in the middle and call quickSort recursively
+  return quickSort(lesser, switcher).concat(arr[0], quickSort(greater, switcher));
 }
