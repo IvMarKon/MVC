@@ -1,6 +1,7 @@
 image: node:latest
 
 cache:
+  key: cs
   paths:
   - node_modules/
 
@@ -11,3 +12,5 @@ test:start:1:
   script:
    - npm test
    
+only:
+    - master   
