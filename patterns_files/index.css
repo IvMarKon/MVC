@@ -1,0 +1,12 @@
+html,body{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  font-family: 'Amatic SC', cursive;
+  font-size: 4rem;
+  color: #383838;
+  text-shadow: 4px 8px 20px #232323;
+}
