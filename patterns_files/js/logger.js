@@ -10,11 +10,11 @@ var logger = (function () {
     },
     //show full stack of messages if it is not empty
     show: function () {
-      if (logger != "") {
+      if (logger !== "") {
         console.log(logger);
         //clear stack after its output
         logger = "";
       }
     }
-  }
+  };
 })();
