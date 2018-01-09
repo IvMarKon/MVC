@@ -15,7 +15,7 @@ function getRandomArray(size) {
   return arr;
 }
 //algorithm counter output
-function algo_count(start) {
+function algoCount(start) {
   console.warn("Algorithm runs: " + new Date(new Date() - start).getUTCMilliseconds() + " milliseconds");
 }
 
