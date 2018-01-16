@@ -15,8 +15,22 @@ function getRandomArray(size) {
   return arr;
 }
 //algorithm counter output
-function algoCount(start) {
-  console.warn("Algorithm runs: " + new Date(new Date() - start).getUTCMilliseconds() + " milliseconds");
+function algoCount(message,start) {
+  console.warn(message+" runs: " + new Date(new Date() - start).getUTCMilliseconds() + " milliseconds");
+}
+//generates ordered array
+function getOrderedArray(size){
+  var arr = [];
+  if(size < 2){
+    return [1];
+  }else if(size > 2){
+    for(var i=1;i<size+1;i++){
+      arr.push(i);
+    }
+    return arr;
+  }else{
+    return null;
+  }  
 }
 
 /**
@@ -114,4 +128,39 @@ function quickSort(arr, switcher) {
 
   //concat two arrays and first element in the middle and call quickSort recursively
   return quickSort(lesser, switcher).concat(arr[0], quickSort(greater, switcher));
+}
+
+/**
+ * Binary search
+ */
+
+function binarySearch(list, item) {
+  //get low and highest index
+  var low = 0;
+  var high = list.length - 1;
+
+  //while there won't be the one element
+  while (low <= high) {
+
+    //take the middle element
+    var mid = Math.ceil((low + high) / 2);
+
+    //great we find the item that we need, output it's index
+    if (list[mid] == item) {
+      console.log("%cBinary search: the position of item in array is - "+mid, "color: green;background:white;font-weight:bold;font-size:20px"); 
+      //console.warn("The position of item in array is: "+mid);
+      return mid;
+
+    //item is less than array item you take, cut off the bigger array part
+    } else if (list[mid] > item) {
+      high = mid - 1;
+
+    //item is bigger than array item you take, cut off the less array part
+    } else if (list[mid] < item) {
+      low = mid + 1;
+    }
+
+  }
+  //if nothing works
+  return null;
 }
