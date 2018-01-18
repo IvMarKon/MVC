@@ -10,6 +10,7 @@ var keyAction = function (side) {
   } else {
     //add event to logger on key press
     logger.add("The ball moves: " + side);
+    return side;
   }
 };
 
@@ -20,6 +21,7 @@ var keyEvent = function (event) {
   } else {
     //add event to logger on key press
     logger.add("The ball make: " + event);
+    return event;
   }
 };
 
