@@ -59,5 +59,5 @@ HashTable.prototype.print = function () {
       string += this.values[value][key] + ' ';
     }
   }
-  console.log(string.trim());
+  return string.trim();
 };
