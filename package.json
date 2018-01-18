@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "just js sorts",
   "scripts": {
-    "test": "mocha",
+    "test": "gulp lint",
     "serve_sorts": "npm install && gulp watch-sorts",
     "debug_sorts": "gulp debug-sorts",
     "serve_patterns": "npm install && gulp watch-patterns",
