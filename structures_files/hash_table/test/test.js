@@ -1,5 +1,8 @@
+//use the BDD interface before loading the test scripts
 mocha.setup('bdd');
+//add chai assert
 var assert = chai.assert;
+//init new hash table
 var hashTable = new HashTable(3);
 
 describe('Add new item to hash table', function () {
@@ -62,4 +65,5 @@ describe('Remove items from hash table', function () {
   });
 });
 
+//running test scripts
 mocha.run();
