@@ -17,6 +17,7 @@ function getRandomArray(size) {
 //algorithm counter output
 function algoCount(message, start) {
   console.warn(message + " runs: " + new Date(new Date() - start).getUTCMilliseconds() + " milliseconds");
+  return new Date(new Date() - start).getUTCMilliseconds();
 }
 //generates ordered array
 function getOrderedArray(size) {
