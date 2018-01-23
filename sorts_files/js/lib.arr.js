@@ -9,7 +9,7 @@ function getRandomArray(size) {
   var arr = [];
 
   for (let i = 0; i < size; i++) {
-    arr.push(getRandomArbitrary(0, 100));
+    arr.push(getRandomArbitrary(0, 1000));
   }
 
   return arr;

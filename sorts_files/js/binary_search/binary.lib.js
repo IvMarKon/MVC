@@ -15,7 +15,6 @@ function binarySearch(list, item) {
 
     //great we find the item that we need, output it's index
     if (list[mid] === item) {
-      console.log("%cBinary search: the position of item in array is - " + mid, "color: green;background:white;font-weight:bold;font-size:20px");
       //console.warn("The position of item in array is: "+mid);
       return mid;
 
