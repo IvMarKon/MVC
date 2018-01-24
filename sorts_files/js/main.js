@@ -7,8 +7,8 @@
 var start = Date.now();
 
 //Get one random array for all
-var rand = getRandomArray(100);
-var order = getOrderedArray(25);
+rand = getRandomArray(100);
+order = getOrderedArray(25);
 console.log("%cThe random array is: " + rand + " length: " + rand.length, boldLog("red"));
 
 //merge-sort / second param - switches log on
@@ -21,6 +21,9 @@ algoCount("Quick sort algorithm", start);
 
 console.log("%cThe selectSort final array is: " + selectSort(rand) + " length: " + selectSort(rand).length, boldLog("green"));
 algoCount("Select sort algorithm", start);
+
+console.log("%cThe insertSort final array is: " + insertSort(rand) + " length: " + insertSort(rand).length, boldLog("green"));
+algoCount("Insert sort algorithm", start);
 
 //binary search / second param - item position of what we want to find
 console.log("%cBinary search: the position of item in array is - " + binarySearch(order, 10), "color: green;background:white;font-weight:bold;font-size:20px");

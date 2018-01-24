@@ -1,20 +1,20 @@
+function swap(arr, i, j) {
+  var temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
 function selectSort(arr) {
-  var resArr = [];
-  var min = 0;
-  var len = arr.length;
-  for (var i = 0; i < len; i++) {
-    min = 0;
-    if (i == len - 1) {
-      resArr.push(arr[0]);
-    } else {
-      for (var j = 0; j < len; j++) {
-        if (arr[min] > arr[j]) {
-          min = j;
-        }
+  for(var i = 0; i < arr.length; i++) {
+    var min = i;
+    for(var j = i + 1; j < arr.length; j++) {
+      if(arr[j] < arr[min]) {
+        min = j;
       }
-      resArr.push(arr[min]);
-      arr.splice(min, 1);
+    }
+    if(i !== min) {
+      swap(arr, i, min);
     }
   }
-  return resArr;
+  return arr;
 }
