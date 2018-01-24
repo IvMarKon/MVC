@@ -19,6 +19,9 @@ algoCount("Merge sort algorithm", start);
 console.log("%cThe quickSort final array is: " + quickSort(rand) + " length: " + quickSort(rand).length, boldLog("green"));
 algoCount("Quick sort algorithm", start);
 
+console.log("%cThe selectSort final array is: " + selectSort(rand) + " length: " + selectSort(rand).length, boldLog("green"));
+algoCount("Select sort algorithm", start);
+
 //binary search / second param - item position of what we want to find
 console.log("%cBinary search: the position of item in array is - " + binarySearch(order, 10), "color: green;background:white;font-weight:bold;font-size:20px");
 algoCount("Binary search", start);
