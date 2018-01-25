@@ -1,0 +1,22 @@
+var singl = new SingleLinkedList();
+singl.print(); // => ''
+singl.add(1);
+singl.add(2);
+singl.add(3);
+singl.add(4);
+singl.add(5);
+singl.add(6);
+singl.print();
+console.log('length is :', singl.length());
+singl.remove(3);
+singl.remove(9);
+singl.remove(1);
+singl.remove(4);
+singl.print();
+console.log('length is :', singl.length());
+singl.add(6);
+singl.insertAfter(3, 2);
+singl.print();
+console.log('length is :', singl.length());
+singl.traverse(function(node) { node.data = node.data + singl.length(); });
+singl.print();
