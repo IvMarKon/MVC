@@ -1,0 +1,16 @@
+var stack = new Stack();
+stack.add(1);
+stack.add(2);
+stack.add(3);
+console.log('====================================');
+console.log(stack.print());
+console.log('====================================');
+stack.add(4);
+stack.add(5);
+stack.add(6);
+console.log('====================================');
+console.log(stack.get());
+console.log('====================================');
+console.log('====================================');
+console.log(stack.print());
+console.log('====================================');
