@@ -44,9 +44,9 @@ SingleLinkedList.prototype.remove = function(data){
 SingleLinkedList.prototype.insertAfter = function(data, toNodeData){
   var current = this.head;
   while(current) {
-    if(current.data === toNodeData) {
+    if(current.data == toNodeData) {
       var node = new Node(data);
-      if(current === this.tail) {
+      if(current == this.tail) {
         this.tail.next = node;
         this.tail = node;
       } else {
@@ -80,5 +80,5 @@ SingleLinkedList.prototype.print = function() {
     string += current.data + ' ';
     current = current.next;
   }
-  console.log(string.trim());
+  return string.trim();
 }
