@@ -39,3 +39,6 @@ algoCount("Exponent search", start);
 
 console.log("%cFibonachi search: the position of item in array is - " + fibonachiSearch(order, 10), "color: green;background:white;font-weight:bold;font-size:20px");
 algoCount("Fibonachi search", start);
+
+console.log("%cTernary search: the position of item in array is - " + ternarySearch(order, 10), "color: green;background:white;font-weight:bold;font-size:20px");
+algoCount("Ternary search", start);
