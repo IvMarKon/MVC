@@ -37,8 +37,10 @@ algoCount("Jump search", start);
 console.log("%cExponent search: the position of item in array is - " + exponentSearch(order, 10), "color: green;background:white;font-weight:bold;font-size:20px");
 algoCount("Exponent search", start);
 
+//fibonachi search / second param - item position of what we want to find
 console.log("%cFibonachi search: the position of item in array is - " + fibonachiSearch(order, 10), "color: green;background:white;font-weight:bold;font-size:20px");
 algoCount("Fibonachi search", start);
 
+//ternary search / second param - item position of what we want to find
 console.log("%cTernary search: the position of item in array is - " + ternarySearch(order, 10), "color: green;background:white;font-weight:bold;font-size:20px");
 algoCount("Ternary search", start);
