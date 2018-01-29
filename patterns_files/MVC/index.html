@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
+  <div class="js-container">
+
+    <input type="text" class="js-task-textbox">
+    <input type="button" class="js-add-task-button" value="Add Task">
+
+    <div class="js-tasks-container"></div>
+    <!-- end tasks -->
+    <input type="button" class="js-complete-task-button" value="Complete Tasks">
+    <input type="button" class="js-delete-task-button" value="Delete Tasks">
+
+  </div>
+
   <script src="./js/event.js"></script>
   <script src="./js/model.js"></script>
   <script src="./js/view.js"></script>
   <script src="./js/controller.js"></script>
+  <script>
+    (function () {
+      var model = new TaskModel(),
+        view = new TaskView(model),
+        controller = new TaskController(model, view);
+    })();
+
+  </script>
 </body>
+
 </html>
